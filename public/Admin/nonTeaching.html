@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Non-Teaching Staff Dashboard</title>
+    <link rel="stylesheet" href="../output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rancho&display=swap"
+        rel="stylesheet">
+
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <aside class="w-[80vw] md:w-[50vw] lg:w-[20vw] bg-white shadow-lg p-6 fixed h-screen hidden lg:block">
+            <div class="flex items-center space-x-2 mb-8">
+                <a href="#" class="block text-2xl md:text-3xl font-bold md:pt-6 text-gray-700">SMART SCHOOL</a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="bg-blue-500 rounded-md pl-1 p-1 text-white mb-2">
+                        <a href="#" class="flex items-center space-x-2 py-2 text-xl font-[500] pl-2">
+                            <img src="../../asset/dashboard.png" class="w-6 h-6" alt="dashboard">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="rounded-md pl-1 p-1 mb-2">
+                        <a href="facility-management.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
+                            <img src="../../asset/facility.png" class="w-6 h-6" alt="Facility Management">
+                            <span>Facility Management</span>
+                        </a>
+                    </li>
+                    <li class="rounded-md pl-1 p-1 mb-2">
+                        <a href="support-requests.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
+                            <img src="../../asset/support.png" class="w-6 h-6" alt="Support Requests">
+                            <span>Support Requests</span>
+                        </a>
+                    </li>
+                    <li class="rounded-md pl-1 p-1 mb-2">
+                        <a href="announcements.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
+                            <img src="../../asset/announcement.png" class="w-6 h-6" alt="Announcements">
+                            <span>Announcements</span>
+                        </a>
+                    </li>
+                    <li class="rounded-md pl-1 p-1 mb-2">
+                        <a href="settings.html" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
+                            <img src="../../asset/settings.png" class="w-6 h-6" alt="Settings">
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="rounded-md pl-1 mb-2">
+                        <a href="#" class="flex items-center space-x-2 py-2 text-[18px] pl-2">
+                            <img src="../../../asset/logout.png" class="w-6 h-6" alt="Logout">
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-6 lg:ml-[20vw] w-full">
+            <!-- Mobile Sidebar Toggle Button -->
+            <div class="lg:hidden flex justify-between mb-6">
+                <a href="admin-dashboard.html" class="text-2xl font-bold">SMART SCHOOL</a>
+                <img src="../../asset/menu.png" class="w-6 h-6" alt="menu" id="sidebar-toggle">
+            </div>
+
+            <!-- Top bar -->
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-semibold">Welcome, Mr Adegbenga</h2>
+                <div class="hidden md:flex items-center space-x-4">
+                    <img src="../../asset/mail.png" class="w-6 h-6 cursor-pointer rounded-full" alt="mail" />
+                    <img src="../../asset/notification.png" class="w-6 h-6 cursor-pointer rounded-full" alt="notifications" />
+                    <span class="bg-gray-200 p-2 rounded-full cursor-pointer">
+                        <img src="../../asset/profile.jpg" class="w-8 h-8 rounded-full" alt="profile" />
+                    </span>
+                    <div>
+                        <p class="text-lg font-semibold">Adegbenga Oluwatosin</p>
+                        <p class="text-center text-gray-400">Admin</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-gray-600 font-semibold md:text-lg mb-4">Total Administrative Staff</h3>
+                    <p class="text-[17px] font-bold">50</p>
+                    <span class="text-blue-500">Across all departments</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg text-gray-600 font-semibold mb-4">Total Support Requests</h3>
+                    <p class="text-[17px] font-bold">35</p>
+                    <span class="text-green-500">Pending resolution</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg text-gray-600 font-semibold mb-4">Facility Issues</h3>
+                    <p class="text-[17px] font-bold">12</p>
+                    <span class="text-purple-500">Pending maintenance</span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg text-gray-600 font-semibold mb-4">Upcoming Events</h3>
+                    <p class="text-[17px] font-bold">5</p>
+                    <span class="text-red-500">This month</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                <!-- Calendar -->
+                <div class="bg-white p-6 rounded-lg shadow-md mb-">
+                    <h3 class="text-lg text-gray-600 font-semibold mb-4">Calendar</h3>
+                    <div id="calendar" class="overflow-x-auto"></div>
+                </div>
+
+                <!-- Announcements Section -->
+                <div class="bg-white px-6 pt-6 rounded-lg shadow-md">
+                    <div class="flex justify-between">
+                        <h3 class="text-lg text-gray-600 font-semibold mb-4">Latest Announcements</h3>
+                        <a href="#" class="text-blue-500">Edit</a>
+                    </div>
+                    <ul>
+                        <li class="mb-4">
+                            <h4 class="font-bold">System Maintenance</h4>
+                            <p class="text-gray-600">Scheduled maintenance on October 5th from 1 AM to 3 AM.</p>
+                        </li>
+                        <li class="sm:mb-4">
+                            <h4 class="font-bold">New Academic Year</h4>
+                            <p class="text-gray-600">The new academic year starts on September 1st. Ensure all preparations are completed.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+             <!-- Administrative Monitoring -->
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                <!-- Recent Activities Section -->
+                <div class="bg-white h-[100%] p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-lg text-gray-600 font-semibold mb-4">Recent Activities</h3>
+                    <ul>
+                        <li class="flex items-center mb-2">
+                            <span class="h-2 w-2 rounded-full bg-green-400 mr-4"></span>
+                            <span class="text-gray-600">Maintenance request completed for Library Air Conditioning.</span>
+                        </li>
+                        <li class="flex items-center mb-2">
+                            <span class="h-2 w-2 rounded-full bg-green-400 mr-4"></span>
+                            <span class="text-gray-600">New announcement posted regarding cafeteria renovations.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Reports Section -->
+                <div class="bg-white h-[100%] p-6 rounded-lg shadow-md mb-6">
+                    <h3 class="text-lg text-gray-600 font-semibold mb-4">Reports</h3>
+                    <ul>
+                        <li class="flex items-center mb-2">
+                            <span class="h-2 w-2 rounded-full bg-green-400 mr-4"></span>
+                            <span class="text-gray-600">Monthly Facility Maintenance Report submitted.</span>
+                        </li>
+                        <li class="flex items-center mb-2">
+                            <span class="h-2 w-2 rounded-full bg-green-400 mr-4"></span>
+                            <span class="text-gray-600">Administrative Staff Performance Review completed.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FullCalendar JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+
+</html>
